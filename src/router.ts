@@ -6,6 +6,7 @@ import { calculateDefaultSampleDetourController } from "./usecases/DefaultSample
 import { calculateKnowledgeController } from "./usecases/Knowledge";
 import { calculatePriozirationController } from "./usecases/Priorization";
 import { calculateQualityController } from "./usecases/Quality";
+import { calculateRangeController } from "./usecases/Range";
 
 const router = Router();
 
@@ -36,4 +37,9 @@ router.get("/api/v1/calculate/detour", (request, response) => {
 router.get("/api/v1/calculate/sample/detour", (request, response) => {
   return calculateDefaultSampleDetourController.handle(request, response);
 });
+
+router.get("/api/v1/calculate/range", (request, response) => {
+  return calculateRangeController.handle(request, response);
+});
+
 export { router };

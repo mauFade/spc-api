@@ -34,7 +34,7 @@ export const calculateDefaultDetour = (data: number[]): number => {
    * de todos os itens do array dividido
    * pela quantidade
    */
-  const squareRoot = sum / lenght;
-  const result = Math.sqrt(squareRoot);
+  const division = sum / lenght;
+  const result = Math.sqrt(division);
   return result;
 };
