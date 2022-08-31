@@ -2,6 +2,7 @@ import { Router } from "express";
 import { calculateAverageController } from "./usecases/Average";
 import { calculateCapacityController } from "./usecases/Capacity";
 import { calculateDefaultDetourController } from "./usecases/DefaultDetour";
+import { calculateDefaultSampleDetourController } from "./usecases/DefaultSampleDetour";
 import { calculateKnowledgeController } from "./usecases/Knowledge";
 import { calculatePriozirationController } from "./usecases/Priorization";
 import { calculateQualityController } from "./usecases/Quality";
@@ -32,4 +33,7 @@ router.get("/api/v1/calculate/detour", (request, response) => {
   return calculateDefaultDetourController.handle(request, response);
 });
 
+router.get("/api/v1/calculate/sample/detour", (request, response) => {
+  return calculateDefaultSampleDetourController.handle(request, response);
+});
 export { router };
