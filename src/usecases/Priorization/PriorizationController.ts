@@ -9,13 +9,15 @@ export class PriorizationController {
     const { C, Cpk, IQP }: IPriorizationDTO = Object(request["query"]);
 
     try {
-      const data = await this.priorizationUseCase.calculatePriozation({
+      const responseData = await this.priorizationUseCase.calculatePriozation({
         C: Number(C),
         Cpk: Number(Cpk),
         IQP: Number(IQP),
       });
 
-      return response.status(200).send({ success: true, data });
+      return response
+        .status(200)
+        .send({ success: true, data: Number(responseData.toFixed(2)) });
     } catch (error) {
       return response
         .status(400)
