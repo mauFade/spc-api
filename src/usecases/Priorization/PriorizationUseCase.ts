@@ -1,8 +1,16 @@
 import { IPriorizationRepository } from "../../repositories/Priorization";
+import { calculatePriozation } from "../../utils/calculatePriorization";
 import { IPriorizationDTO } from "./PriorizationDTO";
 
 export class PriorizationUseCase {
-  constructor(private priorizationRepository: IPriorizationRepository) {}
+  async calculatePriozation({ IQP, C, Cpk }: IPriorizationDTO) {
+    if (!IQP || !C || !Cpk) {
+      throw new Error("All data is required for calculation.");
+    }
 
-  async fetchResult({ IQP, IPP, C, Cpk }: IPriorizationDTO) {}
+    // Índice de priorização é igual ao índ. de qualidade dividido pelo valor de capacidade vezes o conhecimento técnico
+    const data = calculatePriozation(IQP, C, Cpk);
+
+    return data;
+  }
 }

@@ -1,7 +1,4 @@
 export interface IPriorizationDTO {
-  // Índice de priorização
-  IPP: number;
-
   // Índice de qualidade
   IQP: number;
 
