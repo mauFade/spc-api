@@ -2,6 +2,7 @@
  * Função para calcular o índice de qualidade de um processo
  * @param ICQ Índice de importância
  * @param RKJ Intensidade das relações atribuídas
+ * @returns ICQ Qualidade
  */
 export const calculateQuality = (ICQ: number, RKJ: number[]) => {
   const result: number[] = [];

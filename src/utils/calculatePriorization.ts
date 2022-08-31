@@ -3,6 +3,7 @@
  * @param IQP Índice de qualidade
  * @param C Conhecimento técnico
  * @param Cpk Valor de capacidade
+ * @returns IPP Prioridade
  */
 export const calculatePriozation = (IQP: number, C: number, Cpk: number) => {
   /**
