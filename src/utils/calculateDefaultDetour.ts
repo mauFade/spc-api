@@ -3,14 +3,10 @@ import { calculateAverage } from "./calculateAverage";
 /**
  * Função para calcular desvio padrão
  * @param data Array de dados
- * @param quantity Quantidade de itens na média
  * @returns Desvio padrão dos dados
  */
-export const calculateDefaultDetour = (
-  data: number[],
-  quantity: number
-): number => {
-  const average = calculateAverage(data, quantity);
+export const calculateDefaultDetour = (data: number[]): number => {
+  const average = calculateAverage(data);
 
   const auxArr: number[] = [];
 
@@ -29,7 +25,7 @@ export const calculateDefaultDetour = (
    * pela quantidade
    */
   const result = Math.sqrt(
-    auxArr.reduce((sum, index) => sum + index, 0) / quantity
+    auxArr.reduce((sum, index) => sum + index, 0) / data.length
   );
 
   return result;
