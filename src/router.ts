@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { calculateAverageController } from "./usecases/Average";
 import { calculateCapacityController } from "./usecases/Capacity";
 import { calculateKnowledgeController } from "./usecases/Knowledge";
 import { calculatePriozirationController } from "./usecases/Priorization";
@@ -20,6 +21,10 @@ router.get("/api/v1/calculate/knowledge", (request, response) => {
 
 router.get("/api/v1/calculate/capacity", (request, response) => {
   return calculateCapacityController.handle(request, response);
+});
+
+router.get("/api/v1/calculate/average", (request, response) => {
+  return calculateAverageController.handle(request, response);
 });
 
 export { router };
