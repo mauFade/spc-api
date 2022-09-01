@@ -12,6 +12,7 @@ import { calculatePriozirationController } from "./usecases/1 - Basic/Priorizati
 import { calculateQualityController } from "./usecases/1 - Basic/Quality";
 import { calculateRangeController } from "./usecases/2 - Variables/Range";
 import { calculateDefaultDetourController as calculateDefaultDetourControllerChap3 } from "./usecases/3 - Attributes/DefaultDetour";
+import { calculateControlLimitsController } from "./usecases/3 - Attributes/ControlLimits";
 
 const router = Router();
 
@@ -65,6 +66,10 @@ router.get("/api/v1/3/calculate/notconforms/average", (request, response) => {
 
 router.get("/api/v1/3/calculate/defaultdetour", (request, response) => {
   return calculateDefaultDetourControllerChap3.handle(request, response);
+});
+
+router.get("/api/v1/3/calculate/controllimits", (request, response) => {
+  return calculateControlLimitsController.handle(request, response);
 });
 
 export { router };
