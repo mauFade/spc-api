@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { calculateNotConformsController } from "./usecases/3 - Attributes/NotConforms";
+import { calculateNotConformsAverageController } from "./usecases/3 - Attributes/NotConformsAverage";
 import { calculateAverageController } from "./usecases/Average";
 import { calculateAverageControlController } from "./usecases/AverageControl";
 import { calculateAverageLimitControlController } from "./usecases/AverageLimitControl";
@@ -55,6 +56,10 @@ router.get("/api/v1/calculate/average/control/medium", (request, response) => {
 
 router.get("/api/v1/3/calculate/notconforms", (request, response) => {
   return calculateNotConformsController.handle(request, response);
+});
+
+router.get("/api/v1/3/calculate/notconforms/average", (request, response) => {
+  return calculateNotConformsAverageController.handle(request, response);
 });
 
 export { router };
