@@ -19,5 +19,5 @@ export const calculateNotConformsFraction = (
 
   const result = deffectualProdutctsValue / verifiedProductsValue;
 
-  return Number(result.toFixed(2));
+  return Number(result.toFixed(4));
 };
