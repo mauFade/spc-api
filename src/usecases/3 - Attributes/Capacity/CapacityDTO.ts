@@ -5,7 +5,7 @@ export interface ICapacityDTO {
   /**
    * Produtos não-conformes
    */
-  deffectualProdutctsArray: string;
+  deffectualProductsArray: string;
 
   /**
    * Produtos verificados

@@ -9,13 +9,13 @@ import { calculateNotConformsFraction } from "./calculateNotConformsAverageFract
 export const calculateCapacity = (
   deffectualProdutcts: number[],
   verifiedProducts: number[]
-): string => {
+): number => {
   const fraction = calculateNotConformsFraction(
     deffectualProdutcts,
     verifiedProducts
   );
 
-  const capacityResponse = `${(1 - fraction) * 100}%`;
+  const capacityResponse = (1 - fraction) * 100;
 
   return capacityResponse;
 };
