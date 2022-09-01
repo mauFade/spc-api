@@ -11,7 +11,7 @@ import { calculateNotConformsFraction } from "./calculateNotConformsAverageFract
 export const calculateControlLimits = (
   deffectualProductsArray: number[],
   verifiedProductsArray: number[]
-): IControlLimits => {
+): any => {
   const defaultDetour = calculateDefaultDetour(
     deffectualProductsArray,
     verifiedProductsArray
@@ -40,8 +40,14 @@ export const calculateControlLimits = (
     }
   }
 
-  return {
-    superiorControlLimit: superiorControlLimit[0],
-    inferiorControlLimit: inferiorControlLimit[0],
-  };
+  const responseArray: IControlLimits[] = [];
+
+  for (let key = 0; key < inferiorControlLimit.length; key++) {
+    responseArray.push({
+      inferiorControlLimit: Number(inferiorControlLimit[key].toFixed(5)),
+      superiorControlLimit: Number(superiorControlLimit[key].toFixed(5)),
+    });
+  }
+
+  return responseArray;
 };
