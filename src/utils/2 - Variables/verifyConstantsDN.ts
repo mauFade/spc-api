@@ -1,4 +1,4 @@
-import { IDNConstants } from "../interfaces/dnconstants";
+import { IDNConstants } from "../../interfaces/dnconstants";
 
 /**
  * Função para verificar os valores das constantes D4, D3, d2 e A2 de um determinado tamanho de amostra

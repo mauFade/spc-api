@@ -1,4 +1,4 @@
-import { calculateDefaultSampleDetour } from "../../utils/calculateDefaultSampleDetour";
+import { calculateDefaultSampleDetour } from "../../../utils/2 - Variables/calculateDefaultSampleDetour";
 import { IDefaultSampleDetourDTO } from "./DefaultSampleDetour";
 
 export class DefaultSampleDetourUseCase {

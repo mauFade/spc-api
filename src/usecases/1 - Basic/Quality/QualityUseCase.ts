@@ -1,4 +1,4 @@
-import { calculateQuality } from "../../utils/calculateQuality";
+import { calculateQuality } from "../../../utils/1 - Basic/calculateQuality";
 import { IQualityDTO } from "./QualityDTO";
 
 export class QualityUseCase {

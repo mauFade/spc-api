@@ -1,4 +1,4 @@
-import { calculateDefaultDetour } from "../../utils/calculateDefaultDetour";
+import { calculateDefaultDetour } from "../../../utils/2 - Variables/calculateDefaultDetour";
 import { IDefaultDetourDTO } from "./DefaultDetourDTO";
 
 export class DefaultDetourUseCase {

@@ -1,8 +1,8 @@
-import { calculateAverage } from "../../utils/calculateAverage";
-import { verifyConstantsDN } from "../../utils/verifyConstantsDN";
+import { calculateAverage } from "../../../utils/2 - Variables/calculateAverage";
+import { verifyConstantsDN } from "../../../utils/2 - Variables/verifyConstantsDN";
 import { IAverageControlDTO } from "./AverageControlDTO";
-import { IDNConstants } from "../../interfaces/dnconstants";
-import { calculateAverageControlLimit } from "../../utils/calculateAverageControlLimit";
+import { IDNConstants } from "../../../interfaces/dnconstants";
+import { calculateAverageControlLimit } from "../../../utils/2 - Variables/calculateAverageControlLimit";
 
 export class AverageControlUseCase {
   async calculate({ dataArr }: IAverageControlDTO) {

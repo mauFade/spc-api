@@ -1,5 +1,5 @@
 import { ICapacityDTO } from "./CapacityDTO";
-import { calculateCapacity } from "../../utils/calculateCapacity";
+import { calculateCapacity } from "../../../utils/1 - Basic/calculateCapacity";
 
 export class CapacityUseCase {
   async calculate({ C, IPP, IQP }: ICapacityDTO) {

@@ -1,16 +1,16 @@
 import { Router } from "express";
 import { calculateNotConformsController } from "./usecases/3 - Attributes/NotConforms";
 import { calculateNotConformsAverageController } from "./usecases/3 - Attributes/NotConformsAverage";
-import { calculateAverageController } from "./usecases/Average";
-import { calculateAverageControlController } from "./usecases/AverageControl";
-import { calculateAverageLimitControlController } from "./usecases/AverageLimitControl";
-import { calculateCapacityController } from "./usecases/Capacity";
-import { calculateDefaultDetourController } from "./usecases/DefaultDetour";
-import { calculateDefaultSampleDetourController } from "./usecases/DefaultSampleDetour";
-import { calculateKnowledgeController } from "./usecases/Knowledge";
-import { calculatePriozirationController } from "./usecases/Priorization";
-import { calculateQualityController } from "./usecases/Quality";
-import { calculateRangeController } from "./usecases/Range";
+import { calculateAverageController } from "./usecases/2 - Variables/Average";
+import { calculateAverageControlController } from "./usecases/2 - Variables/AverageControl";
+import { calculateAverageLimitControlController } from "./usecases/2 - Variables/AverageLimitControl";
+import { calculateCapacityController } from "./usecases/1 - Basic/Capacity";
+import { calculateDefaultDetourController } from "./usecases/2 - Variables/DefaultDetour";
+import { calculateDefaultSampleDetourController } from "./usecases/2 - Variables/DefaultSampleDetour";
+import { calculateKnowledgeController } from "./usecases/1 - Basic/Knowledge";
+import { calculatePriozirationController } from "./usecases/1 - Basic/Priorization";
+import { calculateQualityController } from "./usecases/1 - Basic/Quality";
+import { calculateRangeController } from "./usecases/2 - Variables/Range";
 
 const router = Router();
 

@@ -1,4 +1,4 @@
-import { calculateAverageControlMedian } from "../../utils/calculateAverageControlMedian";
+import { calculateAverageControlMedian } from "../../../utils/2 - Variables/calculateAverageControlMedian";
 import { IAverageControlLimitDTO } from "./AverageLimitControDTO";
 
 export class AverageLimitControlUseCase {

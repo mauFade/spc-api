@@ -1,4 +1,4 @@
-import { calculateRange } from "../../utils/calculateRange";
+import { calculateRange } from "../../../utils/2 - Variables/calculateRange";
 import { IRangeDTO } from "./RangeDTO";
 
 export class RangeUseCase {

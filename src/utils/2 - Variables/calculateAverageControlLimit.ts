@@ -1,4 +1,4 @@
-import { IDNConstants } from "../interfaces/dnconstants";
+import { IDNConstants } from "../../interfaces/dnconstants";
 
 /**
  * Função para calcular o limite superior e inferior de um determinado array

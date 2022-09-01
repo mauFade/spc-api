@@ -1,4 +1,4 @@
-import { calculateKnowledge } from "../../utils/calculateKnowledge";
+import { calculateKnowledge } from "../../../utils/1 - Basic/calculateKnowledge";
 import { IKnowledgeDTO } from "./KnowledgeDTO";
 
 export class KnowledgeUseCase {

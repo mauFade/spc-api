@@ -1,4 +1,4 @@
-import { calculateAverage } from "../../utils/calculateAverage";
+import { calculateAverage } from "../../../utils/2 - Variables/calculateAverage";
 import { IAverageDTO } from "./AverageDTO";
 
 export class AverageUseCase {

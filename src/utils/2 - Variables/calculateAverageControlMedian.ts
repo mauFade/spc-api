@@ -1,4 +1,4 @@
-import { IDNConstants } from "../interfaces/dnconstants";
+import { IDNConstants } from "../../interfaces/dnconstants";
 import { calculateAverage } from "./calculateAverage";
 import { calculateRange } from "./calculateRange";
 import { verifyConstantsDN } from "./verifyConstantsDN";

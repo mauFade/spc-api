@@ -1,5 +1,4 @@
-import { IPriorizationRepository } from "../../repositories/Priorization";
-import { calculatePriozation } from "../../utils/calculatePriorization";
+import { calculatePriozation } from "../../../utils/1 - Basic/calculatePriorization";
 import { IPriorizationDTO } from "./PriorizationDTO";
 
 export class PriorizationUseCase {
