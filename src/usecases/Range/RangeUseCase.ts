@@ -1,4 +1,4 @@
-import { calculateAverage } from "../../utils/calculateAverage";
+import { calculateRange } from "../../utils/calculateRange";
 import { IRangeDTO } from "./RangeDTO";
 
 export class RangeUseCase {
@@ -7,7 +7,7 @@ export class RangeUseCase {
       throw new Error("No data provided.");
     }
 
-    const result = calculateAverage(JSON.parse(items));
+    const result = calculateRange(JSON.parse(items));
 
     return result;
   }

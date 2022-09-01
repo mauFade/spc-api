@@ -20,5 +20,8 @@ export const calculateAverageControlLimit = (
    */
   const inferiorLimitControl = DNConstants.D3 * range;
 
-  return { superiorLimitControl, inferiorLimitControl };
+  return {
+    superiorLimitControl: Number(superiorLimitControl.toFixed(2)),
+    inferiorLimitControl: Number(inferiorLimitControl.toFixed(2)),
+  };
 };
