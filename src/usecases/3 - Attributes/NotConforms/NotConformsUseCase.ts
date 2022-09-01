@@ -15,6 +15,6 @@ export class NotConformsUseCase {
       Number(verifiedProducts)
     );
 
-    return Number(result.toFixed(2));
+    return Number(result.toFixed(3));
   }
 }

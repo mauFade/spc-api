@@ -10,22 +10,30 @@ import { calculateNotConformsFraction } from "./calculateNotConformsAverageFract
 export const calculateDefaultDetour = (
   deffectualProductsArray: number[],
   verifiedProductsArray: number[]
-): Array<number> => {
+): number => {
   const defaultFractionNotConform = calculateNotConformsFraction(
     deffectualProductsArray,
     verifiedProductsArray
   );
 
-  const resultArray: number[] = [];
+  console.log(defaultFractionNotConform);
 
-  for (const index in verifiedProductsArray) {
-    resultArray[index] = Number(
-      (
-        Math.sqrt(defaultFractionNotConform * (1 - defaultFractionNotConform)) /
-        Math.sqrt(verifiedProductsArray[index])
-      ).toFixed(5)
-    );
-  }
+  // const resultArray: number[] = [];
 
-  return resultArray;
+  // for (const index in verifiedProductsArray) {
+  //   resultArray[index] = Number(
+  //     (
+  //       Math.sqrt(defaultFractionNotConform * (1 - defaultFractionNotConform)) /
+  //       Math.sqrt(verifiedProductsArray[index])
+  //     ).toFixed(5)
+  //   );
+  // }
+
+  // return resultArray;
+
+  const result =
+    Math.sqrt(defaultFractionNotConform * (1 - defaultFractionNotConform)) /
+    Math.sqrt(verifiedProductsArray[0]);
+
+  return Number(result.toFixed(4));
 };
