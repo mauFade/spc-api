@@ -16,8 +16,6 @@ export const calculateDefaultDetour = (
     verifiedProductsArray
   );
 
-  console.log(defaultFractionNotConform);
-
   // const resultArray: number[] = [];
 
   // for (const index in verifiedProductsArray) {
