@@ -13,7 +13,7 @@ export const calculateProductsLoss = (
   cost: number,
   detour: number,
   meta: number
-): number => {
+) => {
   const loss = calculateFinantialLoss(meta, meta + detour, cost, detour);
 
   const sumOfAllValuesDataArr = dataArray.reduce(
@@ -23,11 +23,11 @@ export const calculateProductsLoss = (
 
   const auxArr: number[] = [];
 
-  for (const item in auxArr) {
+  for (const item in dataArray) {
     auxArr[item] = (1 / dataArray.length) * (sumOfAllValuesDataArr * loss);
   }
 
   const result = auxArr.reduce((index, val) => index + val, 0);
 
-  return result;
+  return { result, auxArr };
 };
