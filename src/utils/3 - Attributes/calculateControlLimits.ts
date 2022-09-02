@@ -29,7 +29,7 @@ export const calculateControlLimits = (
   if (inferiorControlLimit < 0) inferiorControlLimit = 0;
 
   return {
-    superiorControlLimit: Number(superiorControlLimit.toFixed(3)),
-    inferiorControlLimit: Number(inferiorControlLimit.toFixed(3)),
+    superiorControlLimit: Number(superiorControlLimit.toFixed(4)),
+    inferiorControlLimit: Number(inferiorControlLimit.toFixed(4)),
   };
 };

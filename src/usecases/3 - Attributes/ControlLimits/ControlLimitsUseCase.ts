@@ -10,14 +10,6 @@ export class ControlLimitsUseCase {
       throw new Error("All data are required");
     }
 
-    // Subgrupos devem ser maiores que 20, seguindo regra
-    if (
-      JSON.parse(verifiedProductsArray).length < 20 ||
-      JSON.parse(deffectualProductsArray).length < 20
-    ) {
-      throw new Error("Subgroups length must be greater than 20 items.");
-    }
-
     if (
       JSON.parse(verifiedProductsArray).length !==
       JSON.parse(deffectualProductsArray).length
