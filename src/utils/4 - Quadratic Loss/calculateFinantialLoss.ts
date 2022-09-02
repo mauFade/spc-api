@@ -1,3 +1,5 @@
+import { calculateLossCoefficient } from "./calculateLossCoefficient";
+
 /**
  * Calcula a perda financeira de acordo os dados
  * @param meta Valor meta do processo
@@ -6,9 +8,6 @@
  * @param metaDetour Desvio da meta
  * @returns Perda financeira
  */
-
-import { calculateLossCoefficient } from "./calculateLossCoefficient";
-
 export const calculateFinantialLoss = (
   meta: number,
   value: number,
