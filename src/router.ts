@@ -16,6 +16,7 @@ import { calculateControlLimitsController } from "./usecases/3 - Attributes/Cont
 import { calculateCapacityController as calculateCapacityControllerChap3 } from "./usecases/3 - Attributes/Capacity";
 import { calculateLossCoefficientController } from "./usecases/4 - Quadratic Loss/LossCoefficent";
 import { calculateFinantialLossController } from "./usecases/4 - Quadratic Loss/FinantialLoss";
+import { calculateProductLossController } from "./usecases/4 - Quadratic Loss/ProductLoss";
 
 const router = Router();
 
@@ -85,6 +86,10 @@ router.get("/api/v1/4/calculate/losscoefficient", (request, response) => {
 
 router.get("/api/v1/4/calculate/finantialloss", (request, response) => {
   return calculateFinantialLossController.handle(request, response);
+});
+
+router.get("/api/v1/4/calculate/product", (request, response) => {
+  return calculateProductLossController.handle(request, response);
 });
 
 export { router };
