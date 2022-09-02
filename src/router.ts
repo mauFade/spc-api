@@ -15,6 +15,7 @@ import { calculateDefaultDetourController as calculateDefaultDetourControllerCha
 import { calculateControlLimitsController } from "./usecases/3 - Attributes/ControlLimits";
 import { calculateCapacityController as calculateCapacityControllerChap3 } from "./usecases/3 - Attributes/Capacity";
 import { calculateLossCoefficientController } from "./usecases/4 - Quadratic Loss/LossCoefficent";
+import { calculateFinantialLossController } from "./usecases/4 - Quadratic Loss/FinantialLoss";
 
 const router = Router();
 
@@ -80,6 +81,10 @@ router.get("/api/v1/3/calculate/capacity", (request, response) => {
 
 router.get("/api/v1/4/calculate/losscoefficient", (request, response) => {
   return calculateLossCoefficientController.handle(request, response);
+});
+
+router.get("/api/v1/4/calculate/finantialloss", (request, response) => {
+  return calculateFinantialLossController.handle(request, response);
 });
 
 export { router };
