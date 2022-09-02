@@ -14,6 +14,7 @@ import { calculateRangeController } from "./usecases/2 - Variables/Range";
 import { calculateDefaultDetourController as calculateDefaultDetourControllerChap3 } from "./usecases/3 - Attributes/DefaultDetour";
 import { calculateControlLimitsController } from "./usecases/3 - Attributes/ControlLimits";
 import { calculateCapacityController as calculateCapacityControllerChap3 } from "./usecases/3 - Attributes/Capacity";
+import { calculateLossCoefficientController } from "./usecases/4 - Quadratic Loss/LossCoefficent";
 
 const router = Router();
 
@@ -75,6 +76,10 @@ router.get("/api/v1/3/calculate/controllimits", (request, response) => {
 
 router.get("/api/v1/3/calculate/capacity", (request, response) => {
   return calculateCapacityControllerChap3.handle(request, response);
+});
+
+router.get("/api/v1/4/calculate/losscoefficient", (request, response) => {
+  return calculateLossCoefficientController.handle(request, response);
 });
 
 export { router };
