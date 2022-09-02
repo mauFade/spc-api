@@ -23,7 +23,10 @@ export const calculateControlLimits = (
 
   const superiorControlLimit = defaultFraction + 3 * defaultDetour;
 
-  const inferiorControlLimit = defaultFraction - 3 * defaultDetour;
+  let inferiorControlLimit = defaultFraction - 3 * defaultDetour;
+
+  // Por regra, se o limite inferior for negativo, ele deve ser fixado em 0.
+  if (inferiorControlLimit < 0) inferiorControlLimit = 0;
 
   return {
     superiorControlLimit: Number(superiorControlLimit.toFixed(3)),
