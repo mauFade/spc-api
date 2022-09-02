@@ -1,4 +1,4 @@
-import { IAdjustedResponse } from "../../interfaces/adjustedReproducibility";
+import { ISystemsResponse } from "../../interfaces/systems";
 
 /**
  * Função para calcular a reprodutibilidade ajustada
@@ -15,7 +15,7 @@ export const calculateAdjustedReproducibility = (
   d2: number,
   pieces: number,
   cicles: number
-): IAdjustedResponse => {
+): ISystemsResponse => {
   const REPRODUCIBILITY_CONSTANT = 5.15;
 
   const defaultDetour = Number((max - min).toFixed(3)) / d2;
@@ -30,8 +30,8 @@ export const calculateAdjustedReproducibility = (
   );
 
   return {
-    defaultDetour: Number(operatorVariation.toFixed(4)),
-    operatorVariation: Number(
+    operatorVariation: Number(operatorVariation.toFixed(4)),
+    defaultDetour: Number(
       (Number(operatorVariation.toFixed(4)) / REPRODUCIBILITY_CONSTANT).toFixed(
         4
       )
