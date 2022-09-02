@@ -18,6 +18,7 @@ import { calculateLossCoefficientController } from "./usecases/4 - Quadratic Los
 import { calculateFinantialLossController } from "./usecases/4 - Quadratic Loss/FinantialLoss";
 import { calculateProductLossController } from "./usecases/4 - Quadratic Loss/ProductLoss";
 import { calculateReproducibilityController } from "./usecases/5 - Measurement Sistems/Reproducibility";
+import { calculateAdjustedReproducibilityController } from "./usecases/5 - Measurement Sistems/AdjustedReproducibility";
 
 const router = Router();
 
@@ -95,6 +96,10 @@ router.get("/api/v1/4/calculate/product", (request, response) => {
 
 router.get("/api/v1/5/calculate/reproducibility", (request, response) => {
   return calculateReproducibilityController.handle(request, response);
+});
+
+router.get("/api/v1/5/calculate/adjusted", (request, response) => {
+  return calculateAdjustedReproducibilityController.handle(request, response);
 });
 
 export { router };
