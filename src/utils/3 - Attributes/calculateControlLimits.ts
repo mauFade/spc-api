@@ -11,7 +11,7 @@ import { calculateNotConformsFraction } from "./calculateNotConformsAverageFract
 export const calculateControlLimits = (
   deffectualProductsArray: number[],
   verifiedProductsArray: number[]
-): any => {
+): IControlLimits => {
   const defaultDetour = calculateDefaultDetour(
     deffectualProductsArray,
     verifiedProductsArray
@@ -21,33 +21,12 @@ export const calculateControlLimits = (
     verifiedProductsArray
   );
 
-  // Limite de controle superior
-  const superiorControlLimit: number[] = [];
+  const superiorControlLimit = defaultFraction + 3 * defaultDetour;
 
-  for (const item in defaultDetour) {
-    superiorControlLimit[item] = defaultFraction + 3 * defaultDetour[item];
-  }
+  const inferiorControlLimit = defaultFraction - 3 * defaultDetour;
 
-  // Limite de controle inferior
-  const inferiorControlLimit: number[] = [];
-
-  for (const item in defaultDetour) {
-    inferiorControlLimit[item] = defaultFraction - 3 * defaultDetour[item];
-
-    // Por regra, se o limite inferior for negativo, deve ser fixado em 0.
-    if (inferiorControlLimit[item] < 0) {
-      inferiorControlLimit[item] = 0;
-    }
-  }
-
-  const responseArray: IControlLimits[] = [];
-
-  for (let key = 0; key < inferiorControlLimit.length; key++) {
-    responseArray.push({
-      inferiorControlLimit: Number(inferiorControlLimit[key].toFixed(5)),
-      superiorControlLimit: Number(superiorControlLimit[key].toFixed(5)),
-    });
-  }
-
-  return responseArray;
+  return {
+    superiorControlLimit: Number(superiorControlLimit.toFixed(3)),
+    inferiorControlLimit: Number(inferiorControlLimit.toFixed(3)),
+  };
 };
