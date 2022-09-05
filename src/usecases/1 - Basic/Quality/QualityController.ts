@@ -6,14 +6,12 @@ export class QualityController {
   constructor(private qualityUseCase: QualityUseCase) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
-    const { ICQ, RKJ }: IQualityDTO = Object(request["query"]);
+    const { importance, intencity }: IQualityDTO = Object(request["query"]);
 
     try {
-      console.log(JSON.parse(RKJ));
-
       const result = await this.qualityUseCase.calculate({
-        ICQ: Number(ICQ),
-        RKJ,
+        importance: Number(importance),
+        intencity,
       });
 
       return response.status(200).send({ success: true, data: result });

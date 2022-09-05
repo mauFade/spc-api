@@ -1,7 +1,7 @@
 export interface IQualityDTO {
   // Índice de importância
-  ICQ: number;
+  importance: number;
 
   // Intensidade das relações atribuídas
-  RKJ: string;
+  intencity: string;
 }
