@@ -9,14 +9,20 @@ export const calculatePiecesVariablity = (
   d2: number,
   max: number,
   min: number
-): number => {
+): {
+  pieceVariability: number;
+  defaultDetour: number;
+} => {
   const CONSTANT_VARIABILITY = 5.15;
   // Peça com maior média menos peça com menor média
   const Rp = max - min;
 
-  const defaultDetour = Number(Rp.toFixed(2)) / d2;
+  const defaultDetour = Number((Number(Rp.toFixed(2)) / d2).toFixed(2));
 
   const pieceVariablity = defaultDetour * CONSTANT_VARIABILITY;
 
-  return Number(pieceVariablity.toFixed(2));
+  return {
+    pieceVariability: Number(pieceVariablity.toFixed(2)),
+    defaultDetour,
+  };
 };

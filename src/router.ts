@@ -21,6 +21,7 @@ import { calculateReproducibilityController } from "./usecases/5 - Measurement S
 import { calculateAdjustedReproducibilityController } from "./usecases/5 - Measurement Systems/AdjustedReproducibility";
 import { calculateSystemVariabilityController } from "./usecases/5 - Measurement Systems/System Variability";
 import { calculatePiecesVariabilityController } from "./usecases/5 - Measurement Systems/Pieces Variability";
+import { calculateTotalSystemVariabilityController } from "./usecases/5 - Measurement Systems/Total System Variability";
 
 const router = Router();
 
@@ -110,6 +111,10 @@ router.get("/api/v1/5/calculate/system", (request, response) => {
 
 router.get("/api/v1/5/calculate/pieces", (request, response) => {
   return calculatePiecesVariabilityController.handle(request, response);
+});
+
+router.get("/api/v1/5/calculate/total", (request, response) => {
+  return calculateTotalSystemVariabilityController.handle(request, response);
 });
 
 export { router };

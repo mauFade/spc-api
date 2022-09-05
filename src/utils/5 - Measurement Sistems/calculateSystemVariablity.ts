@@ -12,8 +12,6 @@ export const calculateSystemVariability = (
 ): ISystemVariabilityResponse => {
   const variability = Math.pow(system, 2) + Math.pow(opereators, 2);
 
-  console.log(system / 5.15, opereators / 5.15);
-
   const detour =
     Math.pow(Number((system / 5.15).toFixed(2)), 2) +
     Math.pow(Number((opereators / 5.15).toFixed(2)), 2);
