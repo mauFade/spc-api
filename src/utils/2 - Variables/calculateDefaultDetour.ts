@@ -19,12 +19,12 @@ export const calculateDefaultDetour = (data: number[]): number => {
     auxArr[index] = Math.pow(data[index] - average, 2);
   }
 
-  let lenght: number;
+  let length: number;
 
   if (data.length > 30) {
-    lenght = data.length;
+    length = data.length;
   } else {
-    lenght = data.length - 1;
+    length = data.length - 1;
   }
 
   const sum = auxArr.reduce((sum, index) => sum + index, 0);
@@ -34,7 +34,7 @@ export const calculateDefaultDetour = (data: number[]): number => {
    * de todos os itens do array dividido
    * pela quantidade
    */
-  const division = sum / lenght;
+  const division = sum / length;
   const result = Math.sqrt(division);
   return result;
 };
