@@ -2,8 +2,8 @@ import { ICapacityDTO } from "./CapacityDTO";
 import { calculateCapacity } from "../../../utils/1 - Basic/calculateCapacity";
 
 export class CapacityUseCase {
-  async calculate({ C, IPP, IQP }: ICapacityDTO) {
-    const data = calculateCapacity(IQP, IPP, C);
+  async calculate({ knowledge, priority, quality }: ICapacityDTO) {
+    const data = calculateCapacity(quality, priority, knowledge);
 
     if (data <= 0.33) {
       return { level: "Muito incapaz", data };

@@ -6,13 +6,15 @@ export class KnowledgeController {
   constructor(private knowledgeUseCase: KnowledgeUseCase) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
-    const { CPK, IPP, IQP }: IKnowledgeDTO = Object(request["query"]);
+    const { capacity, priority, quality }: IKnowledgeDTO = Object(
+      request["query"]
+    );
 
     try {
       const data = await this.knowledgeUseCase.calculate({
-        CPK: Number(CPK),
-        IPP: Number(IPP),
-        IQP: Number(IQP),
+        capacity: Number(capacity),
+        priority: Number(priority),
+        quality: Number(quality),
       });
 
       return response.status(200).send({ success: true, data });

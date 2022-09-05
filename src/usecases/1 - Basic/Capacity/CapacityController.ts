@@ -6,13 +6,15 @@ export class CapacityController {
   constructor(private capacityUseCase: CapacityUseCase) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
-    const { C, IPP, IQP }: ICapacityDTO = Object(request["query"]);
+    const { knowledge, priority, quality }: ICapacityDTO = Object(
+      request["query"]
+    );
 
     try {
       const data = await this.capacityUseCase.calculate({
-        C: Number(C),
-        IPP: Number(IPP),
-        IQP: Number(IQP),
+        knowledge: Number(knowledge),
+        priority: Number(priority),
+        quality: Number(quality),
       });
 
       return response.status(200).send({ success: true, data });

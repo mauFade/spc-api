@@ -1,10 +1,10 @@
 export interface ICapacityDTO {
   // Índice de qualidade
-  IQP: number;
+  quality: number;
 
   // Índice de prioridade
-  IPP: number;
+  priority: number;
 
   // Conhecimento técnico
-  C: number;
+  knowledge: number;
 }

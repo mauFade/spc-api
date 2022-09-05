@@ -1,10 +1,10 @@
 export interface IKnowledgeDTO {
   // Índice de qualidade
-  IQP: number;
+  quality: number;
 
   // Índice de prioridade
-  IPP: number;
+  priority: number;
 
   // Capacidade
-  CPK: number;
+  capacity: number;
 }

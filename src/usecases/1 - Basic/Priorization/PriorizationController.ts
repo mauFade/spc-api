@@ -6,13 +6,15 @@ export class PriorizationController {
   constructor(private priorizationUseCase: PriorizationUseCase) {}
 
   async handle(request: Request, response: Response): Promise<Response> {
-    const { C, Cpk, IQP }: IPriorizationDTO = Object(request["query"]);
+    const { knowledge, capacity, quality }: IPriorizationDTO = Object(
+      request["query"]
+    );
 
     try {
       const responseData = await this.priorizationUseCase.calculatePriozation({
-        C: Number(C),
-        Cpk: Number(Cpk),
-        IQP: Number(IQP),
+        knowledge: Number(knowledge),
+        capacity: Number(capacity),
+        quality: Number(quality),
       });
 
       return response

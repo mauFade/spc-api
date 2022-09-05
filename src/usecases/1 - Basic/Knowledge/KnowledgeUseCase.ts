@@ -2,12 +2,12 @@ import { calculateKnowledge } from "../../../utils/1 - Basic/calculateKnowledge"
 import { IKnowledgeDTO } from "./KnowledgeDTO";
 
 export class KnowledgeUseCase {
-  async calculate({ CPK, IPP, IQP }: IKnowledgeDTO) {
-    if (!CPK || !IPP || !IQP) {
+  async calculate({ capacity, priority, quality }: IKnowledgeDTO) {
+    if (!capacity || !priority || !quality) {
       throw new Error("All data is required.");
     }
 
-    const data = calculateKnowledge(IQP, IPP, CPK);
+    const data = calculateKnowledge(quality, priority, capacity);
 
     if (data <= 0.2) {
       return { level: "Muito pouco", data };

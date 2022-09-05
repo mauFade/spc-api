@@ -1,10 +1,10 @@
 export interface IPriorizationDTO {
   // Índice de qualidade
-  IQP: number;
+  quality: number;
 
   // Valor de capacidade
-  Cpk: number;
+  capacity: number;
 
   // Conhecimento técnico
-  C: number;
+  knowledge: number;
 }
