@@ -17,9 +17,9 @@ import { calculateCapacityController as calculateCapacityControllerChap3 } from 
 import { calculateLossCoefficientController } from "./usecases/4 - Quadratic Loss/LossCoefficent";
 import { calculateFinantialLossController } from "./usecases/4 - Quadratic Loss/FinantialLoss";
 import { calculateProductLossController } from "./usecases/4 - Quadratic Loss/ProductLoss";
-import { calculateReproducibilityController } from "./usecases/5 - Measurement Sistems/Reproducibility";
-import { calculateAdjustedReproducibilityController } from "./usecases/5 - Measurement Sistems/AdjustedReproducibility";
-import { calculateSystemVariabilityController } from "./usecases/5 - Measurement Sistems/Sistem Variability";
+import { calculateReproducibilityController } from "./usecases/5 - Measurement Systems/Reproducibility";
+import { calculateAdjustedReproducibilityController } from "./usecases/5 - Measurement Systems/AdjustedReproducibility";
+import { calculateSystemVariabilityController } from "./usecases/5 - Measurement Systems/System Variability";
 
 const router = Router();
 
